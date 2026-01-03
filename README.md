@@ -27,6 +27,22 @@ This project encapsulates SWMM (Storm Water Management Model) using the Hydra fr
     2. Example: Run simulations with different time and return period settings: `python main.py -m time=10,20,30 period=1,5,10`
     3. Example: Run simulations with different time, return period and peak shape settings: `python main.py -m time=10,20,30 period=1,5,10 peak=0.3,0.5,0.7`
 
+## Citation
+If you have used hydra-swmm in your research or project, please consider citing it as follows: 1. Project name: hydra-swmm 2. Author: Ziyi Zhan
+1. Project name: hydra-swmm
+2. Author: Ziyi Zhan
+3. GitHub：https://github.com/zhanziyi/hydra-swmm
+4. DOI：https://doi.org/10.5281/zenodo.18141380
+### BibTeX:
+```bibtex
+@software{hydra-swmm,
+  author = {Ziyi Zhan},
+  title = {hydra-swmm},
+  url = {https://github.com/zhanziyi/hydra-swmm},
+  doi = {10.5281/zenodo.18141380},
+  year = {2026}
+}
+```
 
 
 ## 简介
@@ -55,3 +71,20 @@ This project encapsulates SWMM (Storm Water Management Model) using the Hydra fr
     1. 例如，运行不同时间的模拟执行`python main.py -m time=10,20,30`，即可批量运行
     2. 例如，运行不同时间和重现期模拟执行`python main.py -m time=10,20,30 period=1,5,10`
     3. 例如，运行不同时间、重现期和峰形模拟执行`python main.py -m time=10,20,30 period=1,5,10 peak=0.3,0.5,0.7`
+
+## 引用说明
+如果您在研究或项目中使用了 hydra-swmm，请考虑通过以下方式引用：
+1. 项目名称：hydra-swmm
+2. 作者：詹子逸
+3. GitHub 地址：https://github.com/zhanziyi/hydra-swmm
+4. DOI：https://doi.org/10.5281/zenodo.18141380
+### BibTeX 引用格式:
+```bibtex
+@software{hydra-swmm,
+  author = {Ziyi Zhan},
+  title = {hydra-swmm},
+  url = {https://github.com/zhanziyi/hydra-swmm},
+  doi = {10.5281/zenodo.18141380},
+  year = {2026}
+}
+```
