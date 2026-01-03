@@ -1,0 +1,127 @@
+[TITLE]
+;;Project Title/Notes
+
+[OPTIONS]
+;;Option             Value
+FLOW_UNITS           CFS
+INFILTRATION         HORTON
+FLOW_ROUTING         DYNWAVE
+LINK_OFFSETS         DEPTH
+MIN_SLOPE            0
+ALLOW_PONDING        NO
+SKIP_STEADY_STATE    NO
+
+START_DATE           01/03/2026
+START_TIME           00:00:00
+REPORT_START_DATE    01/03/2026
+REPORT_START_TIME    00:00:00
+END_DATE             01/03/2026
+END_TIME             06:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:01:00
+WET_STEP             00:05:00
+DRY_STEP             01:00:00
+ROUTING_STEP         0:00:20 
+RULE_STEP            00:00:00
+
+INERTIAL_DAMPING     PARTIAL
+NORMAL_FLOW_LIMITED  BOTH
+FORCE_MAIN_EQUATION  H-W
+VARIABLE_STEP        0.75
+LENGTHENING_STEP     0
+MIN_SURFAREA         12.566
+MAX_TRIALS           8
+HEAD_TOLERANCE       0.005
+SYS_FLOW_TOL         5
+LAT_FLOW_TOL         5
+MINIMUM_STEP         0.5
+THREADS              16
+
+[EVAPORATION]
+;;Data Source    Parameters
+;;-------------- ----------------
+CONSTANT         0.0
+DRY_ONLY         NO
+
+[RAINGAGES]
+;;Name           Format    Interval SCF      Source    
+;;-------------- --------- ------ ------ ----------
+1                INTENSITY 0:01     1.0      TIMESERIES hydra-swmm      
+
+[SUBCATCHMENTS]
+;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack        
+;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- ----------------
+1                1                2                5        25       500      0.5      0                        
+
+[SUBAREAS]
+;;Subcatchment   N-Imperv   N-Perv     S-Imperv   S-Perv     PctZero    RouteTo    PctRouted 
+;;-------------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+1                0.01       0.1        0.05       0.05       25         OUTLET    
+
+[INFILTRATION]
+;;Subcatchment   Param1     Param2     Param3     Param4     Param5    
+;;-------------- ---------- ---------- ---------- ---------- ----------
+1                3.0        0.5        4          7          0         
+
+[JUNCTIONS]
+;;Name           Elevation  MaxDepth   InitDepth  SurDepth   Aponded   
+;;-------------- ---------- ---------- ---------- ---------- ----------
+2                0          0          0          0          0         
+
+[OUTFALLS]
+;;Name           Elevation  Type       Stage Data       Gated    Route To        
+;;-------------- ---------- ---------- ---------------- -------- ----------------
+3                0          FREE                        NO                       
+
+[CONDUITS]
+;;Name           From Node        To Node          Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow   
+;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
+1                2                3                400        0.01       0          0          0          0         
+
+[XSECTIONS]
+;;Link           Shape        Geom1            Geom2      Geom3      Geom4      Barrels    Culvert   
+;;-------------- ------------ ---------------- ---------- ---------- ---------- ---------- ----------
+1                CIRCULAR     1                0          0          0          1                    
+
+[TIMESERIES]
+;;Name           Date       Time       Value     
+;;-------------- ---------- ---------- ----------
+hydra-swmm       FILE "rain.dat"
+
+[REPORT]
+;;Reporting Options
+SUBCATCHMENTS ALL
+NODES ALL
+LINKS ALL
+
+[TAGS]
+
+[MAP]
+DIMENSIONS 0.000 0.000 10000.000 10000.000
+Units      None
+
+[COORDINATES]
+;;Node           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+2                4509.583           3291.995          
+3                2908.681           2570.462          
+
+[VERTICES]
+;;Link           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+
+[Polygons]
+;;Subcatchment   X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+1                6144.307           6223.224          
+1                5806.088           4757.610          
+1                3235.626           4644.870          
+1                3675.310           6606.539          
+
+[SYMBOLS]
+;;Gage           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+1                1138.670           5659.526          
+

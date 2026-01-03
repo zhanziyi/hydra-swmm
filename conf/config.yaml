@@ -1,0 +1,23 @@
+project_name: Hydra_SWMM
+version: 0.0.1
+
+defaults:
+  - rain: chicago
+  - model: api
+  - _self_ 
+
+inp: resources/test.inp
+rainfile: resources/rain.dat
+
+time: 10
+period: 1
+peak: 0.5
+
+hydra:
+  job:
+    chdir: true
+  run:
+    dir: ./outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}_${time}_${period}_${peak}
+  sweep:
+    dir: ./multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${time}_${period}_${peak}
