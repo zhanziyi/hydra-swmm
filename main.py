@@ -5,7 +5,7 @@ import os
 import hydra
 from hydra.core.hydra_config import HydraConfig
 from hydra.utils import instantiate
-from omegaconf import DictConfig, OmegaConf
+from omegaconf import DictConfig
 import hydra_swmm
 
 @hydra.main(version_base=None, config_path="conf", config_name="config")

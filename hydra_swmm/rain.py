@@ -19,7 +19,7 @@ def chicago_list_1(chicago_parameter_a: float, chicago_parameter_b: float, chica
     for i in range(peak_time+1, int_minute_duration_t+1):
         rainfall_data.append(hour_intensity_formula_float_1(chicago_parameter_a, chicago_parameter_b, chicago_parameter_c, \
             chicago_parameter_n, chicago_year_period_p, (i-peak_time)/chicago_peak_r))
-    return [item / 60 for item in rainfall_data]
+    return rainfall_data
 
 def chicago_list_2(a: float, b: float, c: float, n: float, \
     chicago_year_period_p: float, chicago_peak_r: float, int_minute_duration_t: int) -> list[float]: 
@@ -31,4 +31,4 @@ def chicago_list_2(a: float, b: float, c: float, n: float, \
     for i in range(peak_time+1, int_minute_duration_t+1):
         rainfall_data.append(hour_intensity_formula_float_1(a, b, c, \
             n, chicago_year_period_p, (i-peak_time)/chicago_peak_r))
-    return [item / 60 for item in rainfall_data]
+    return rainfall_data

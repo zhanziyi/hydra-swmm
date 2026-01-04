@@ -9,7 +9,7 @@ defaults:
 inp: resources/test.inp
 rainfile: resources/rain.dat
 
-time: 10
+time: 60
 period: 1
 peak: 0.5
 
