@@ -1,1 +1,2 @@
 _target_: os.system
+command: swmm5.exe
