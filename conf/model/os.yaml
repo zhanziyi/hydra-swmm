@@ -1,2 +1,4 @@
 _target_: os.system
 command: swmm5.exe
+input_file: example.inp
+output_file: example.out
