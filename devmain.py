@@ -18,6 +18,7 @@ def main(cfg: DictConfig):
     hydra_swmm.core.updata_rain_file_2(inp_file, rain_file, cfg.time, instantiate(\
         cfg.rain, chicago_year_period_p = cfg.period, chicago_peak_r = cfg.peak, \
         int_minute_duration_t = cfg.time))
+    # add os.system call to run swmm5
     if False:
         pass
     instantiate(cfg.model, fn_inp=inp_file)
