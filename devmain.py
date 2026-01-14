@@ -19,6 +19,7 @@ def main(cfg: DictConfig):
         cfg.rain, chicago_year_period_p = cfg.period, chicago_peak_r = cfg.peak, \
         int_minute_duration_t = cfg.time))
     # add os.system call to run swmm5
+    # add os.system call to run swmm5
     if False:
         pass
     instantiate(cfg.model, fn_inp=inp_file)
