@@ -22,6 +22,7 @@ def main(cfg: DictConfig):
     # add os.system call to run swmm5
     # add os.system call to run swmm5
     # add os.system call to run swmm5
+    # add os.system call to run swmm5
     if False:
         pass
     instantiate(cfg.model, fn_inp=inp_file)
